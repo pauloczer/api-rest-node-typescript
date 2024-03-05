@@ -1,19 +1,24 @@
 {
-  "name": "api-rest-node-typescript",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "Paulo Ngimbi",
-  "license": "MIT",
-  "private": true,
-  "dependencies": {
-    "express": "^4.18.3"
-  },
-  "devDependencies": {
-    "@types/express": "^4.17.21",
-    "@typescript-eslint/eslint-plugin": "^7.1.1",
-    "@typescript-eslint/parser": "^7.1.1",
-    "eslint": "^8.57.0",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^5.3.3"
-  }
+    "name": "api-rest-node-typescript",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "Paulo Ngimbi",
+    "license": "MIT",
+    "private": true,
+    "scripts": {
+        "start": "ts-node-dev ./src/index.ts"
+    },
+    "dependencies": {
+        "dotenv": "^16.4.5",
+        "express": "^4.18.3",
+        "http-status-codes": "^2.3.0"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.21",
+        "@typescript-eslint/eslint-plugin": "^7.1.1",
+        "@typescript-eslint/parser": "^7.1.1",
+        "eslint": "^8.57.0",
+        "ts-node-dev": "^2.0.0",
+        "typescript": "^5.3.3"
+    }
 }
