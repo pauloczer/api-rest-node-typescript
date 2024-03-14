@@ -24,7 +24,12 @@ export const getAllValidation = validation((getSchema) => ({
 export const getAll = async (req: Request<{}, {}, {}, IQueryProps>, res: Response) => {
   const filter = req.query.filter ?? ''; // Use uma string vazia se req.query.filter for null ou undefined
 
-  const result = await CidadesProvider.getAll(req.query.page || 1, req.query.limit || 7, filter, Number(req.query.id));
+  const result = await CidadesProvider.getAll(
+    req.query.page || 1,
+    req.query.limit || 7,
+    filter,
+    req.query.id !== undefined ? String(req.query.id) : undefined
+  );
   const count = await CidadesProvider.count(filter);
 
   if (result instanceof Error) {
