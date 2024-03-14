@@ -4,8 +4,11 @@ dotenv.config(); // Carrega as variáveis de ambiente do arquivo .env
 import {Knex} from 'knex';
 import path from 'path';
 
-
-
+/*
+console.log('HOST:', process.env.HOST);
+console.log('USER:', process.env.USER);
+console.log('PASSWORD:', process.env.PASSWORD);
+console.log('DATABASENAME:', process.env.DATABASENAME);*/
 
 export const development: Knex.Config = {
   client: 'mysql',
@@ -17,6 +20,16 @@ export const development: Knex.Config = {
     password : process.env.PASSWORD,
     database : process.env.DATABASENAME,
   },
+  /*
+  //para fazer mmigrate
+  connection: {
+    host : '127.0.0.1',
+    port : 3306,
+    user : 'paulo',
+    password : 'paulo!123',
+    database : 'sistema',
+  },
+  */
   migrations: {
     directory: path.resolve(__dirname, '..', 'migrations'),
   },
