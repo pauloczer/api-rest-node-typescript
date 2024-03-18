@@ -13,15 +13,15 @@ console.log('DATABASENAME:', process.env.DATABASENAME);*/
 export const development: Knex.Config = {
   client: 'mysql',
   useNullAsDefault: true,
-  connection: {
+  /* connection: {
     host : process.env.HOST,
     port : process.env.PORTDATABASE ? parseInt(process.env.PORTDATABASE) : undefined,
     user : process.env.USER,
     password : process.env.PASSWORD,
     database : process.env.DATABASENAME,
-  },
-  /*
-  //para fazer mmigrate
+  }, */
+  
+  //para fazer migrate
   connection: {
     host : '127.0.0.1',
     port : 3306,
@@ -29,7 +29,7 @@ export const development: Knex.Config = {
     password : 'paulo!123',
     database : 'sistema',
   },
-  */
+ 
   migrations: {
     directory: path.resolve(__dirname, '..', 'migrations'),
   },

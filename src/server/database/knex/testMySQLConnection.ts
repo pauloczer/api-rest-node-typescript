@@ -1,4 +1,4 @@
-import { Knex } from 'knex';
+/*import { Knex } from 'knex';
 
 // Função para testar a conexão com o MySQL
 export async function testMySQLConnection(config: Knex.Config) {
@@ -16,4 +16,4 @@ export async function testMySQLConnection(config: Knex.Config) {
     await knex.destroy();
     console.log('Conexão encerrada.');
   }
-}
+}*/
